@@ -1,0 +1,60 @@
+.footer {
+    background: #0E1D28;
+    color: white;
+    
+}
+
+.footer__container {
+    display: flex;
+    padding: 120px 20px;
+
+    justify-content: space-between;
+}
+@media (max-width: 550px) {
+    .footer__container {
+        flex-direction: column;
+    }
+}
+
+.footer__logo img {
+    max-width: 100%; /* Лого буде маштабуватися до 100% ширини батьківського контейнера */
+    min-height: 50px; /* Встановіть максимальну висоту, яка вам потрібна */
+    margin-right: 20px;
+}
+
+// .footer__logo img {
+//     max-width: 170px;
+//     max-height: 64px;
+    
+// }
+
+.footer__navigation {
+    display: flex;
+    
+}
+@media (max-width: 390px) {
+    .footer__navigation {
+        flex-wrap: wrap;
+
+        // .navigation__list :not(:last-child) {
+        //     margin-bottom: 15px;
+        // }
+    }
+}
+.footer__navigation > :not(:last-child) {
+    margin-right: calc(30px + (140 - 30) * (100vw / 1262));
+    margin-bottom: 15px;
+}
+
+.navigation__list {}
+
+.navigation__title {
+    font-size: 18px;
+    line-height: calc(24 / 18 * 100%);
+}
+
+.nawigation__item {
+    line-height: calc(24 / 16 * 100%);
+}
+
+.navigation__link {}

@@ -1,0 +1,16 @@
+{
+  "name": "beginner",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "npx live-server --port=777",
+    "scss": "sass scss/index.scss:css/style.css -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "live-server": "^1.2.2",
+    "sass": "^1.58.0"
+  }
+}

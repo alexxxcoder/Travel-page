@@ -5,8 +5,9 @@
 .search-form__info {
     display: flex;
     flex-wrap: wrap; 
-    width: 100%;
 
+    width: 100%;
+    
     & .search-form__field {
         
         min-width: 297px;
@@ -23,6 +24,11 @@
         font-size: 18px;
         color: #fff;
 
+    }
+    @media(max-width:759px) {
+        .search-form__field {
+            margin-top: 15px;
+        }
     }
     
     & .search-form__field::placeholder {
@@ -42,7 +48,9 @@
     font-family: inherit;
 }
 @media(max-width:971px) {
-    .search-form__submit{
-        margin: 10px 0px 0px 0px;
-    }
+   
+}
+
+.search-form__submit{
+    margin: 10px 0px 0px 0px;
 }

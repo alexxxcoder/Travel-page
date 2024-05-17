@@ -1,6 +1,6 @@
 {
   "name": "beginner",
-  "version": "1.0.0",
+  "version": "q",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "live-server": "^1.2.2",
-    "sass": "^1.58.0"
-  }
+    "sass": "^1.77.2"
+  },
+  "repository": "https://github.com/alexxxcoder/Travel-page.git"
 }

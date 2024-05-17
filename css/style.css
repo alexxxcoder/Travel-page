@@ -211,6 +211,11 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  padding: calc(15px + 31 * (100vw - 320px) / 942);
+}
+
+.next-trip__top__btn {
+  margin: 0;
 }
 
 .next-trip__places {
@@ -497,7 +502,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 ._titleH2 {
-  padding: 93px 0px 120px 0px;
+  padding-top: clamp(20px, 20px + 73 * (100vw - 320px) / 942, 93px);
   font-family: lato;
   font-size: 35px;
   font-weight: 500;

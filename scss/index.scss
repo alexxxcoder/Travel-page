@@ -36,7 +36,7 @@
 }
 
 ._titleH2 {
-    padding: clamp(20px, calc(20px + (90 - 20) * (100vw - 320px) / (1262 - 320)), 93px) 0px;
+    margin: clamp(20px, calc(20px + (90 - 20) * (100vw - 320px) / (1262 - 320)), 93px) 0px;
     // padding: 93px 0px 120px 0px;
     font-family: lato;
     font-size: 35px;

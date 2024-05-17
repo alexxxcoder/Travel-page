@@ -4,8 +4,20 @@
 
 .top-places {}
 
-.top-places__title {}
+.top-places__title {
+    position: relative;
+    display: inline-block;
+}
 
+.top-places__title h2::after {
+    content: '';
+    position: absolute;
+    bottom: 80px;
+    left: 0;
+    width: 70%;
+    height: 2px;
+    background-color:  #006dfe;
+}
 .top-places__box-items {
     display: grid;
     grid-template: repeat(2, 1fr) / repeat(3, 1fr);

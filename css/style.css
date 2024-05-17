@@ -213,6 +213,20 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
+.next-trip__top h2 {
+  position: relative;
+}
+
+.next-trip__top h2::after {
+  content: "";
+  position: absolute;
+  bottom: -9px;
+  left: 0;
+  width: 70%;
+  height: 2px;
+  background-color: #006dfe;
+}
+
 .next-trip__places {
   overflow: hidden;
   display: grid;
@@ -339,6 +353,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 .box__btn {
   margin: 0;
+}
+
+.top-places__title {
+  position: relative;
+  display: inline-block;
+}
+
+.top-places__title h2::after {
+  content: "";
+  position: absolute;
+  bottom: 80px;
+  left: 0;
+  width: 70%;
+  height: 2px;
+  background-color: #006dfe;
 }
 
 .top-places__box-items {
@@ -497,7 +526,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 ._titleH2 {
-  padding: clamp(20px, 20px + 70 * (100vw - 320px) / 942, 93px) 0px;
+  margin: clamp(20px, 20px + 70 * (100vw - 320px) / 942, 93px) 0px;
   font-family: lato;
   font-size: 35px;
   font-weight: 500;

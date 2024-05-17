@@ -161,15 +161,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .card__container {
   background: white;
-  padding: 0px 100px 0px 100px;
+  padding: clamp(20px, 20px + 30 * (100vw - 320px) / 942, 50px) 100px;
   box-shadow: 0px 2px 20px 0px rgba(21, 24, 36, 0.16);
 }
 
-@media (max-width: 375px) {
-  .card__container {
-    padding: 0px 40px 0px 40px;
-  }
-}
 .card-body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -179,7 +174,7 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 630px) {
   .card-body {
     grid-template-columns: repeat(1, 1fr);
-    gap: 10px;
+    gap: 30px;
   }
 }
 .item-card__title {
@@ -195,7 +190,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .item-card__btn {
-  margin: 39px 0px 112px 0px;
+  margin-top: clamp(20px, 20px + 19 * (100vw - 320px) / 942, 39px);
   display: flex;
   align-items: center;
   background: transparent;
@@ -502,7 +497,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 ._titleH2 {
-  padding-top: clamp(20px, 20px + 73 * (100vw - 320px) / 942, 93px);
+  padding: clamp(20px, 20px + 70 * (100vw - 320px) / 942, 93px) 0px;
   font-family: lato;
   font-size: 35px;
   font-weight: 500;

@@ -57,50 +57,49 @@ h1, h2, h3, h4, h5, h6 {
 
 .header {
   position: relative;
+  display: flex;
+  justify-content: center;
   width: 100%;
   left: 0;
   top: 0;
   z-index: 50;
-  padding: 0px 100px 0px 100px;
+  margin: 0 auto;
 }
 
 .header__container {
   position: absolute;
   display: flex;
-  min-height: 104px;
+  justify-content: space-between;
   align-items: center;
+  min-height: 104px;
+  padding-left: clamp(20px, 20px + 73 * (100vw - 320px) / 942, 100px);
+  padding-right: clamp(20px, 20px + 73 * (100vw - 320px) / 942, 100px);
 }
 
-@media (max-width: 479px) {
-  .header_container {
-    min-height: 85px;
-  }
-}
 .header__menu {
+  display: flex;
+  align-items: center;
   /*еластичній margin!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-  margin-left: min(488px, 50px + 34.70681458vw);
   color: #fff;
 }
 
-@media (max-width: 479px) {
-  .header__menu {
-    margin-left: 50px;
-  }
-}
 .menu {
   padding: 5px 0px;
 }
 
 .menu__list {
   display: flex;
-  flex-wrap: wrap;
 }
 
-@media (max-width: 515px) {
+@media (max-width: 900px) {
   .menu__list {
-    display: grid;
+    display: none;
   }
 }
+.menu__item a {
+  white-space: nowrap;
+}
+
 .menu__item:not(:last-child) {
   margin-right: 80px;
 }
@@ -110,13 +109,33 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 133.3333333333%;
 }
 
+.burger-icon {
+  cursor: pointer;
+  display: none;
+  flex-direction: column;
+  width: 30px;
+  height: 20px;
+  justify-content: space-between;
+}
+.burger-icon span {
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+}
+
+@media (max-width: 900px) {
+  .burger-icon {
+    display: flex;
+    margin-left: 10px;
+  }
+}
 .search-form__info {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
 }
 .search-form__info .search-form__field {
-  min-width: 297px;
+  min-width: 240px;
   background: transparent url(/assets/svg/Oval.svg) no-repeat left top;
   background-size: 20px;
   padding: 0px 0px 22px 40px;
@@ -507,6 +526,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 ._container {
+  width: 100%;
   max-width: 1262px;
   margin: 0 auto;
   box-sizing: border-box;
@@ -550,6 +570,12 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 3;
 }
 
+@media (max-width: 550px) {
+  .main-block__container {
+    padding-left: calc(20px + 80 * (100vw - 320px) / 880);
+    padding-right: calc(20px + 80 * (100vw - 320px) / 880);
+  }
+}
 .main-block__title {
   max-width: 619px;
   font-size: 50px;

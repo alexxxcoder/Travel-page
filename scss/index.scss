@@ -18,6 +18,7 @@
     flex-direction: column;
 }
 ._container {
+    width: 100%;
     max-width: 1262px;
     // padding: 0px 100px;
     margin: 0 auto;
@@ -60,6 +61,13 @@
     padding: 263px 100px 376px 100px;
     position: relative;
     z-index: 3;
+}
+@media(max-width: 550px) {
+    .main-block__container {
+        padding-left: calc(20px + (100 - 20) * ((100vw - 320px) / (1200 - 320))); ;
+        padding-right: calc(20px + (100 - 20) * ((100vw - 320px) / (1200 - 320))); ;
+        
+    }
 }
 .main-block__title {
     max-width: 619px;

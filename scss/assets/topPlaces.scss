@@ -17,7 +17,11 @@
     width: 70%;
     height: 2px;
     background-color:  #006dfe;
+    
 }
+
+
+
 .top-places__box-items {
     display: grid;
     grid-template: repeat(2, 1fr) / repeat(3, 1fr);

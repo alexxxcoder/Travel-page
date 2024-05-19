@@ -6,51 +6,24 @@
     left: 0;
     top: 0;
     z-index: 50;
-    
-    margin: 0 auto;
-    
-    // margin-top: 5px;
+    margin: 0 auto;    
 }
 
 .header__container {
     position: absolute;
     display: flex;
     justify-content:space-between;
-    // margin: 0 auto;
     align-items: center;
     min-height: 104px;
-    // padding: 0px 100px 0px 100px;
     padding-left: clamp(20px, calc(20px + (93 - 20) * (100vw - 320px) / (1262 - 320)), 100px);
-    padding-right: clamp(20px, calc(20px + (93 - 20) * (100vw - 320px) / (1262 - 320)), 100px);
-    // width: 1262px;
-    // width: 100vw;
-    // padding: 0 calc(100vw - 1261px);
-    
-}
-@media (max-width: 550px) {
-    .header_container {
-    
-        
-    }
-}
-
-.header__logo {
-    
+    padding-right: clamp(20px, calc(20px + (93 - 20) * (100vw - 320px) / (1262 - 320)), 100px);   
 }
 
 .header__menu {
     display: flex;
     align-items: center;
-    /*еластичній margin!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-    // margin-left: min(100%, calc(50px + (488 - 50) * (100vw / 1262)));
-    // margin-left: clamp(20px, calc(20px + (488 - 20) * (100vw - 320px) / (1262 - 320)), 488px);
-    
     color: #fff;
-}
-@media (max-width: 479px) {
-    // .header__menu {
-    //     margin-left: 50px;
-    // }
+    transition: all 0.3s ease 0s;
 }
 
 .menu {
@@ -59,17 +32,6 @@
 
 .menu__list {
     display: flex;
-    // flex-wrap: wrap;
-
-}
-@media (max-width: 900px) {
-    .menu__list {
-        display: none;
-    }
-}
-
-.menu__item a{
-    white-space: nowrap;
 }
 
 .menu__item:not(:last-child) {
@@ -77,30 +39,105 @@
 }
 
 .menu__link {
+    position: relative;
     font-size: 18px;
     line-height: calc(24 / 18 * 100%);
+    white-space: nowrap;
 }
+
+.menu__link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    background-color: #fff;
+    height: .15em;
+    border-radius: 10px;
+    transition: .3s ease-in-out;
+}
+
+.menu__link:hover::after {
+    width: 90%;
+}
+
+///////////// BURGER STYLES   /////////////////
+
 .burger-icon {
-    // position: absolute;
-    // left: 80vw;
     cursor: pointer;
     display: none;
-    flex-direction: column;
-    width: 30px;
-    height: 20px;
-    justify-content: space-between;
-    
+    align-items: center;
+    position: relative;
+    z-index: 40;
+    top: 0;
+    right: 0;
 
     span {
         width: 30px;
-        height: 3px;
+        height: 2px;
+        transform: scale(1);
         background-color: #fff;
-        
     }
+    
 }
+.burger-icon::after, .burger-icon::before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 30px;
+    background-color: #fff;
+    transition: all 0.3s ease 0s;
+}
+
+.burger-icon::after {
+    bottom: 8px;
+}
+
+.burger-icon::before {
+    top: 8px;
+}
+
+.burger-icon.active span {
+    transform: scale(0);
+}
+
+.burger-icon.active::before {
+    top: 50%;
+    transform: rotate(-45deg) translate(0, -50%);
+}
+
+
+.burger-icon.active::after {
+    bottom: 50%;
+    transform: rotate(45deg) translate(0, 50%);
+}
+//////////////   MEDIA   //////////
 @media (max-width: 900px) {
     .burger-icon {
         display: flex;
-        margin-left: 10px;
+        margin: 10px;
     }
+
+    .menu__list {
+        flex-direction: column;
+        row-gap: 9px;
+    }
+
+    .menu__item:not(:last-child) {
+        margin-right: 10px;
+    }
+
+    .header__menu {
+        position: absolute;
+        left: 50%;
+        top: -125%;
+    }   
 }
+
+.header__menu__active {
+    display: flex;  
+    position: absolute;
+    top: 20px;
+    left: 50%;
+}
+

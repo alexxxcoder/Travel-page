@@ -79,8 +79,8 @@ h1, h2, h3, h4, h5, h6 {
 .header__menu {
   display: flex;
   align-items: center;
-  /*еластичній margin!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
   color: #fff;
+  transition: all 0.3s ease 0s;
 }
 
 .menu {
@@ -91,44 +91,105 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
 }
 
-@media (max-width: 900px) {
-  .menu__list {
-    display: none;
-  }
-}
-.menu__item a {
-  white-space: nowrap;
-}
-
 .menu__item:not(:last-child) {
   margin-right: 80px;
 }
 
 .menu__link {
+  position: relative;
   font-size: 18px;
   line-height: 133.3333333333%;
+  white-space: nowrap;
+}
+
+.menu__link::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  background-color: #fff;
+  height: 0.15em;
+  border-radius: 10px;
+  transition: 0.3s ease-in-out;
+}
+
+.menu__link:hover::after {
+  width: 90%;
 }
 
 .burger-icon {
   cursor: pointer;
   display: none;
-  flex-direction: column;
-  width: 30px;
-  height: 20px;
-  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 40;
+  top: 0;
+  right: 0;
 }
 .burger-icon span {
   width: 30px;
-  height: 3px;
+  height: 2px;
+  transform: scale(1);
   background-color: #fff;
+}
+
+.burger-icon::after, .burger-icon::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 30px;
+  background-color: #fff;
+  transition: all 0.3s ease 0s;
+}
+
+.burger-icon::after {
+  bottom: 8px;
+}
+
+.burger-icon::before {
+  top: 8px;
+}
+
+.burger-icon.active span {
+  transform: scale(0);
+}
+
+.burger-icon.active::before {
+  top: 50%;
+  transform: rotate(-45deg) translate(0, -50%);
+}
+
+.burger-icon.active::after {
+  bottom: 50%;
+  transform: rotate(45deg) translate(0, 50%);
 }
 
 @media (max-width: 900px) {
   .burger-icon {
     display: flex;
-    margin-left: 10px;
+    margin: 10px;
+  }
+  .menu__list {
+    flex-direction: column;
+    row-gap: 9px;
+  }
+  .menu__item:not(:last-child) {
+    margin-right: 10px;
+  }
+  .header__menu {
+    position: absolute;
+    left: 50%;
+    top: -125%;
   }
 }
+.header__menu__active {
+  display: flex;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+}
+
 .search-form__info {
   display: flex;
   flex-wrap: wrap;

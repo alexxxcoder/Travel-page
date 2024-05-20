@@ -7,6 +7,7 @@
 .footer__container {
     display: flex;
     padding: 120px 20px;
+    // margin: 0 auto;
 
     justify-content: space-between;
 }
@@ -16,10 +17,15 @@
     }
 }
 
+.footer__logo {
+    padding: 20px 20px 20px 20px;
+}
+
 .footer__logo img {
     max-width: 100%; /* Лого буде маштабуватися до 100% ширини батьківського контейнера */
     min-height: 50px; /* Встановіть максимальну висоту, яка вам потрібна */
     margin-right: 20px;
+    
 }
 
 // .footer__logo img {
@@ -50,11 +56,16 @@
 
 .navigation__title {
     font-size: 18px;
+    font-weight: 700;
     line-height: calc(24 / 18 * 100%);
+    padding-bottom: 4px;
 }
 
 .nawigation__item {
+    font-size: 16px;
+    padding-left: 8px;
     line-height: calc(24 / 16 * 100%);
+
 }
 
 .navigation__link {}

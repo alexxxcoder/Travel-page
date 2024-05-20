@@ -26,6 +26,7 @@
     transition: all 0.3s ease 0s;
 }
 
+
 .menu {
     padding: 5px 0px;
 }
@@ -58,7 +59,7 @@
 }
 
 .menu__link:hover::after {
-    width: 90%;
+    width: 100%;
 }
 
 ///////////// BURGER STYLES   /////////////////

@@ -115,7 +115,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .menu__link:hover::after {
-  width: 90%;
+  width: 100%;
 }
 
 .burger-icon {
@@ -550,6 +550,10 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: column;
   }
 }
+.footer__logo {
+  padding: 20px 20px 20px 20px;
+}
+
 .footer__logo img {
   max-width: 100%; /* Лого буде маштабуватися до 100% ширини батьківського контейнера */
   min-height: 50px; /* Встановіть максимальну висоту, яка вам потрібна */
@@ -572,10 +576,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .navigation__title {
   font-size: 18px;
+  font-weight: 700;
   line-height: 133.3333333333%;
+  padding-bottom: 4px;
 }
 
 .nawigation__item {
+  font-size: 16px;
+  padding-left: 8px;
   line-height: 150%;
 }
 

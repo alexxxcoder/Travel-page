@@ -7,16 +7,18 @@
     <title>Travel</title>
     <link rel="stylesheet" href="/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:regular" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
     <script src="js/main.js" defer></script>
 </head>
 
 <body>
     <div class="wrapper">
-<!-- //// HEADER ////// -->
+        <!-- //// HEADER ////// -->
         <header class="header ">
             <div class="header__container _container">
                 <a href="" class="header__logo"><img src="/assets/odigo-Logo.png" alt="/"></a>
-               
+
                 <nav class="header__menu menu">
                     <ul class="menu__list">
                         <li class="menu__item">
@@ -33,13 +35,13 @@
                         </li>
                     </ul>
                 </nav>
-<!-- //////  BURGER   ////// -->
-                <div class="burger-icon"> 
+                <!-- //////  BURGER   ////// -->
+                <div class="burger-icon">
                     <span></span>
                 </div>
             </div>
         </header>
-<!-- //////  MAIN ////// -->
+        <!-- //////  MAIN ////// -->
         <main class="page">
             <div class="main-block">
                 <div class="main-block__container _container">
@@ -48,7 +50,7 @@
                         guests come over. Being gorgeous with belly side up i could pee on this if i had the energy but
                         under the bed, for attack the child, open the door,
                     </div>
-<!-- //////    FORMA   /////// -->
+                    <!-- //////    FORMA   /////// -->
                     <form class="search-form">
                         <fildset class="search-form__wrap">
                             <div class="search-form__info">
@@ -63,7 +65,7 @@
                     <img src="/assets/img/mainBlock/Image.jpg" alt="cover">
                 </div>
             </div>
-<!-- ////// PAGE-CARD  ////// -->
+            <!-- ////// PAGE-CARD  ////// -->
             <div class="page__card">
                 <div class="card__container _container">
                     <div class="card__title _titleH2">Benefits of Odigo</div>
@@ -102,7 +104,7 @@
                 </div>
             </div>
             <div class="page__next-trip _container">
-<!-- ////////  NEXT_TRIP_TOP  //////// -->
+                <!-- ////////  NEXT_TRIP_TOP  //////// -->
                 <div class="next-trip__top">
                     <h2 class="_titleH2">Get inspired for your next trip</h2>
                     <button class="next-trip__top__btn item-card__btn">
@@ -110,17 +112,19 @@
                         <img src="assets/img/iconsCard/Shape.svg" alt="">
                     </button>
                 </div>
-<!-- ////////   NEXT_TRIP_PLACES   ////// -->
+                <!-- ////////   NEXT_TRIP_PLACES   ////// -->
                 <div class="next-trip__places">
                     <figure class="places__card places__card_size_lg">
-                        <img src="/assets/img/tripBlock/1.jpg" alt="" class="places__card-img places__card-img_lg _filter">
+                        <img src="/assets/img/tripBlock/1.jpg" alt=""
+                            class="places__card-img places__card-img_lg _filter">
                         <figcaption class="places__card-title">
                             Mount Fuji
                         </figcaption>
                         <a href="#" class="places__card_link"></a>
                     </figure>
                     <figure class="places__card places__card_size_lg">
-                        <img src="/assets/img/tripBlock/2.jpg" alt="" class="places__card-img places__card-img_lg _filter">
+                        <img src="/assets/img/tripBlock/2.jpg" alt=""
+                            class="places__card-img places__card-img_lg _filter">
                         <figcaption class="places__card-title">
                             Kioto
                         </figcaption>
@@ -128,21 +132,24 @@
                     </figure>
 
                     <figure class="places__card places__card_size_sm">
-                        <img src="/assets/img/tripBlock/3.jpg" alt="" class="places__card-img places__card-img_sm _filter">
+                        <img src="/assets/img/tripBlock/3.jpg" alt=""
+                            class="places__card-img places__card-img_sm _filter">
                         <figcaption class="places__card-title">
                             Tokio
                         </figcaption>
                         <a href="#" class="places__card_link"></a>
                     </figure>
                     <figure class="places__card places__card_size_sm">
-                        <img src="/assets/img/tripBlock/4.jpg" alt="" class="places__card-img places__card-img_sm _filter">
+                        <img src="/assets/img/tripBlock/4.jpg" alt=""
+                            class="places__card-img places__card-img_sm _filter">
                         <figcaption class="places__card-title">
                             Niigata
                         </figcaption>
                         <a href="#" class="places__card_link"></a>
                     </figure>
                     <figure class="places__card places__card_size_sm">
-                        <img src="/assets/img/tripBlock/5.jpg" alt="" class="places__card-img places__card-img_sm _filter">
+                        <img src="/assets/img/tripBlock/5.jpg" alt=""
+                            class="places__card-img places__card-img_sm _filter">
                         <figcaption class="places__card-title">
                             Sapporo
                         </figcaption>
@@ -194,14 +201,20 @@
                                 <div class="img-items__icons">
                                     <div class="img-items__icon img-items__icon_hard">
                                         <p class="icon__hard-quantity">44</p>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
-                                            <path d="M8 15L6.84 13.921C2.72 10.1035 0 7.58583 0 4.49591C0 1.9782 1.936 0 4.4 0C5.792 0 7.128 0.662125 8 1.70845C8.872 0.662125 10.208 0 11.6 0C14.064 0 16 1.9782 16 4.49591C16 7.58583 13.28 10.1035 9.16 13.9292L8 15Z" fill="white"/>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15"
+                                            viewBox="0 0 16 15" fill="none">
+                                            <path
+                                                d="M8 15L6.84 13.921C2.72 10.1035 0 7.58583 0 4.49591C0 1.9782 1.936 0 4.4 0C5.792 0 7.128 0.662125 8 1.70845C8.872 0.662125 10.208 0 11.6 0C14.064 0 16 1.9782 16 4.49591C16 7.58583 13.28 10.1035 9.16 13.9292L8 15Z"
+                                                fill="white" />
                                         </svg>
                                     </div>
                                     <div class="img-items__icon img-items__icon_masseg">
                                         <p class="icon__masseg-quantity">22</p>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.6 0C13.37 0 13.993 0.63 13.993 1.4L14 14L11.2 11.2H1.4C0.63 11.2 0 10.57 0 9.8V1.4C0 0.63 0.63 0 1.4 0H12.6ZM2.8 8.4H11.2V7H2.8V8.4ZM11.2 6.3H2.8V4.9H11.2V6.3ZM2.8 4.2H11.2V2.8H2.8V4.2Z" fill="white"/>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                            viewBox="0 0 14 14" fill="none">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M12.6 0C13.37 0 13.993 0.63 13.993 1.4L14 14L11.2 11.2H1.4C0.63 11.2 0 10.57 0 9.8V1.4C0 0.63 0.63 0 1.4 0H12.6ZM2.8 8.4H11.2V7H2.8V8.4ZM11.2 6.3H2.8V4.9H11.2V6.3ZM2.8 4.2H11.2V2.8H2.8V4.2Z"
+                                                fill="white" />
                                         </svg>
                                     </div>
                                 </div>
@@ -221,14 +234,20 @@
                                 <div class="img-items__icons">
                                     <div class="img-items__icon img-items__icon_hard">
                                         <p class="icon__hard-quantity">44</p>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
-                                            <path d="M8 15L6.84 13.921C2.72 10.1035 0 7.58583 0 4.49591C0 1.9782 1.936 0 4.4 0C5.792 0 7.128 0.662125 8 1.70845C8.872 0.662125 10.208 0 11.6 0C14.064 0 16 1.9782 16 4.49591C16 7.58583 13.28 10.1035 9.16 13.9292L8 15Z" fill="white"/>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15"
+                                            viewBox="0 0 16 15" fill="none">
+                                            <path
+                                                d="M8 15L6.84 13.921C2.72 10.1035 0 7.58583 0 4.49591C0 1.9782 1.936 0 4.4 0C5.792 0 7.128 0.662125 8 1.70845C8.872 0.662125 10.208 0 11.6 0C14.064 0 16 1.9782 16 4.49591C16 7.58583 13.28 10.1035 9.16 13.9292L8 15Z"
+                                                fill="white" />
                                         </svg>
                                     </div>
                                     <div class="img-items__icon img-items__icon_masseg">
                                         <p class="icon__masseg-quantity">22</p>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.6 0C13.37 0 13.993 0.63 13.993 1.4L14 14L11.2 11.2H1.4C0.63 11.2 0 10.57 0 9.8V1.4C0 0.63 0.63 0 1.4 0H12.6ZM2.8 8.4H11.2V7H2.8V8.4ZM11.2 6.3H2.8V4.9H11.2V6.3ZM2.8 4.2H11.2V2.8H2.8V4.2Z" fill="white"/>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                            viewBox="0 0 14 14" fill="none">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M12.6 0C13.37 0 13.993 0.63 13.993 1.4L14 14L11.2 11.2H1.4C0.63 11.2 0 10.57 0 9.8V1.4C0 0.63 0.63 0 1.4 0H12.6ZM2.8 8.4H11.2V7H2.8V8.4ZM11.2 6.3H2.8V4.9H11.2V6.3ZM2.8 4.2H11.2V2.8H2.8V4.2Z"
+                                                fill="white" />
                                         </svg>
                                     </div>
                                 </div>
@@ -248,14 +267,20 @@
                                 <div class="img-items__icons">
                                     <div class="img-items__icon img-items__icon_hard">
                                         <p class="icon__hard-quantity">44</p>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
-                                            <path d="M8 15L6.84 13.921C2.72 10.1035 0 7.58583 0 4.49591C0 1.9782 1.936 0 4.4 0C5.792 0 7.128 0.662125 8 1.70845C8.872 0.662125 10.208 0 11.6 0C14.064 0 16 1.9782 16 4.49591C16 7.58583 13.28 10.1035 9.16 13.9292L8 15Z" fill="white"/>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15"
+                                            viewBox="0 0 16 15" fill="none">
+                                            <path
+                                                d="M8 15L6.84 13.921C2.72 10.1035 0 7.58583 0 4.49591C0 1.9782 1.936 0 4.4 0C5.792 0 7.128 0.662125 8 1.70845C8.872 0.662125 10.208 0 11.6 0C14.064 0 16 1.9782 16 4.49591C16 7.58583 13.28 10.1035 9.16 13.9292L8 15Z"
+                                                fill="white" />
                                         </svg>
                                     </div>
                                     <div class="img-items__icon img-items__icon_masseg">
                                         <p class="icon__masseg-quantity">22</p>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.6 0C13.37 0 13.993 0.63 13.993 1.4L14 14L11.2 11.2H1.4C0.63 11.2 0 10.57 0 9.8V1.4C0 0.63 0.63 0 1.4 0H12.6ZM2.8 8.4H11.2V7H2.8V8.4ZM11.2 6.3H2.8V4.9H11.2V6.3ZM2.8 4.2H11.2V2.8H2.8V4.2Z" fill="white"/>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                            viewBox="0 0 14 14" fill="none">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M12.6 0C13.37 0 13.993 0.63 13.993 1.4L14 14L11.2 11.2H1.4C0.63 11.2 0 10.57 0 9.8V1.4C0 0.63 0.63 0 1.4 0H12.6ZM2.8 8.4H11.2V7H2.8V8.4ZM11.2 6.3H2.8V4.9H11.2V6.3ZM2.8 4.2H11.2V2.8H2.8V4.2Z"
+                                                fill="white" />
                                         </svg>
                                     </div>
                                 </div>
@@ -275,14 +300,20 @@
                                 <div class="img-items__icons">
                                     <div class="img-items__icon img-items__icon_hard">
                                         <p class="icon__hard-quantity">44</p>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
-                                            <path d="M8 15L6.84 13.921C2.72 10.1035 0 7.58583 0 4.49591C0 1.9782 1.936 0 4.4 0C5.792 0 7.128 0.662125 8 1.70845C8.872 0.662125 10.208 0 11.6 0C14.064 0 16 1.9782 16 4.49591C16 7.58583 13.28 10.1035 9.16 13.9292L8 15Z" fill="white"/>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15"
+                                            viewBox="0 0 16 15" fill="none">
+                                            <path
+                                                d="M8 15L6.84 13.921C2.72 10.1035 0 7.58583 0 4.49591C0 1.9782 1.936 0 4.4 0C5.792 0 7.128 0.662125 8 1.70845C8.872 0.662125 10.208 0 11.6 0C14.064 0 16 1.9782 16 4.49591C16 7.58583 13.28 10.1035 9.16 13.9292L8 15Z"
+                                                fill="white" />
                                         </svg>
                                     </div>
                                     <div class="img-items__icon img-items__icon_masseg">
                                         <p class="icon__masseg-quantity">22</p>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.6 0C13.37 0 13.993 0.63 13.993 1.4L14 14L11.2 11.2H1.4C0.63 11.2 0 10.57 0 9.8V1.4C0 0.63 0.63 0 1.4 0H12.6ZM2.8 8.4H11.2V7H2.8V8.4ZM11.2 6.3H2.8V4.9H11.2V6.3ZM2.8 4.2H11.2V2.8H2.8V4.2Z" fill="white"/>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                            viewBox="0 0 14 14" fill="none">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M12.6 0C13.37 0 13.993 0.63 13.993 1.4L14 14L11.2 11.2H1.4C0.63 11.2 0 10.57 0 9.8V1.4C0 0.63 0.63 0 1.4 0H12.6ZM2.8 8.4H11.2V7H2.8V8.4ZM11.2 6.3H2.8V4.9H11.2V6.3ZM2.8 4.2H11.2V2.8H2.8V4.2Z"
+                                                fill="white" />
                                         </svg>
                                     </div>
                                 </div>
@@ -302,14 +333,20 @@
                                 <div class="img-items__icons">
                                     <div class="img-items__icon img-items__icon_hard">
                                         <p class="icon__hard-quantity">44</p>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
-                                            <path d="M8 15L6.84 13.921C2.72 10.1035 0 7.58583 0 4.49591C0 1.9782 1.936 0 4.4 0C5.792 0 7.128 0.662125 8 1.70845C8.872 0.662125 10.208 0 11.6 0C14.064 0 16 1.9782 16 4.49591C16 7.58583 13.28 10.1035 9.16 13.9292L8 15Z" fill="white"/>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15"
+                                            viewBox="0 0 16 15" fill="none">
+                                            <path
+                                                d="M8 15L6.84 13.921C2.72 10.1035 0 7.58583 0 4.49591C0 1.9782 1.936 0 4.4 0C5.792 0 7.128 0.662125 8 1.70845C8.872 0.662125 10.208 0 11.6 0C14.064 0 16 1.9782 16 4.49591C16 7.58583 13.28 10.1035 9.16 13.9292L8 15Z"
+                                                fill="white" />
                                         </svg>
                                     </div>
                                     <div class="img-items__icon img-items__icon_masseg">
                                         <p class="icon__masseg-quantity">22</p>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.6 0C13.37 0 13.993 0.63 13.993 1.4L14 14L11.2 11.2H1.4C0.63 11.2 0 10.57 0 9.8V1.4C0 0.63 0.63 0 1.4 0H12.6ZM2.8 8.4H11.2V7H2.8V8.4ZM11.2 6.3H2.8V4.9H11.2V6.3ZM2.8 4.2H11.2V2.8H2.8V4.2Z" fill="white"/>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                            viewBox="0 0 14 14" fill="none">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M12.6 0C13.37 0 13.993 0.63 13.993 1.4L14 14L11.2 11.2H1.4C0.63 11.2 0 10.57 0 9.8V1.4C0 0.63 0.63 0 1.4 0H12.6ZM2.8 8.4H11.2V7H2.8V8.4ZM11.2 6.3H2.8V4.9H11.2V6.3ZM2.8 4.2H11.2V2.8H2.8V4.2Z"
+                                                fill="white" />
                                         </svg>
                                     </div>
                                 </div>
@@ -329,14 +366,20 @@
                                 <div class="img-items__icons">
                                     <div class="img-items__icon img-items__icon_hard">
                                         <p class="icon__hard-quantity">44</p>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
-                                            <path d="M8 15L6.84 13.921C2.72 10.1035 0 7.58583 0 4.49591C0 1.9782 1.936 0 4.4 0C5.792 0 7.128 0.662125 8 1.70845C8.872 0.662125 10.208 0 11.6 0C14.064 0 16 1.9782 16 4.49591C16 7.58583 13.28 10.1035 9.16 13.9292L8 15Z" fill="white"/>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15"
+                                            viewBox="0 0 16 15" fill="none">
+                                            <path
+                                                d="M8 15L6.84 13.921C2.72 10.1035 0 7.58583 0 4.49591C0 1.9782 1.936 0 4.4 0C5.792 0 7.128 0.662125 8 1.70845C8.872 0.662125 10.208 0 11.6 0C14.064 0 16 1.9782 16 4.49591C16 7.58583 13.28 10.1035 9.16 13.9292L8 15Z"
+                                                fill="white" />
                                         </svg>
                                     </div>
                                     <div class="img-items__icon img-items__icon_masseg">
                                         <p class="icon__masseg-quantity">22</p>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.6 0C13.37 0 13.993 0.63 13.993 1.4L14 14L11.2 11.2H1.4C0.63 11.2 0 10.57 0 9.8V1.4C0 0.63 0.63 0 1.4 0H12.6ZM2.8 8.4H11.2V7H2.8V8.4ZM11.2 6.3H2.8V4.9H11.2V6.3ZM2.8 4.2H11.2V2.8H2.8V4.2Z" fill="white"/>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                            viewBox="0 0 14 14" fill="none">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M12.6 0C13.37 0 13.993 0.63 13.993 1.4L14 14L11.2 11.2H1.4C0.63 11.2 0 10.57 0 9.8V1.4C0 0.63 0.63 0 1.4 0H12.6ZM2.8 8.4H11.2V7H2.8V8.4ZM11.2 6.3H2.8V4.9H11.2V6.3ZM2.8 4.2H11.2V2.8H2.8V4.2Z"
+                                                fill="white" />
                                         </svg>
                                     </div>
                                 </div>
@@ -355,10 +398,13 @@
         <div class="page__video">
             <div class="video__wrap">
                 <div class="video__wrap_item"></div>
-                <iframe class="video__element" src="https://www.youtube.com/embed/28ZjrtD_iL0?si=XVeXUUarucvgOYJd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe class="video__element" src="https://www.youtube.com/embed/28ZjrtD_iL0?si=XVeXUUarucvgOYJd"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
             </div>
         </div>
-<!-- ///////  FOOTER   /////// -->
+        <!-- ///////  FOOTER   /////// -->
         <footer class="footer">
             <div class="footer__container _container">
                 <div class="footer__logo">

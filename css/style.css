@@ -564,20 +564,25 @@ h1, h2, h3, h4, h5, h6 {
   margin-right: 20px;
 }
 
-.footer__navigation {
-  display: flex;
+.navigation__item {
+  position: relative;
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden; /* Щоб приховати вміст при зміні висоти */
 }
 
-@media (max-width: 390px) {
-  .footer__navigation {
-    flex-wrap: wrap;
-  }
-}
 .navigation__title {
   font-size: 18px;
   font-weight: 700;
   line-height: 133.3333333333%;
   padding-bottom: 4px;
+}
+
+.sub-navigation__list {
+  display: none;
 }
 
 .sub-nawigation__item {
@@ -587,30 +592,50 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navigation__list {
+  position: relative;
   display: flex;
+  gap: calc(30px + 8.7163232964vw);
 }
 
 @media (max-width: 500px) {
+  .navigation__list {
+    flex-direction: column;
+    gap: 4px;
+  }
   .navigation__list > li {
     margin-bottom: 20px;
   }
+  .sub-navigation__list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background-color: #444;
+  }
 }
-.navigation__item {
-  position: relative;
-}
-
 .navigation__item > :not(:last-child) {
-  margin-right: calc(30px + 8.7163232964vw);
   margin-bottom: 15px;
 }
 
 .navigation__item:hover .sub-navigation__list {
   display: block;
+  max-height: 200px;
 }
 
 .sub-navigation__list {
-  position: absolute;
-  display: none;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  background-color: #444;
+}
+
+.sub-nawigation__item {
+  padding-bottom: 5px;
 }
 
 @media (max-width: 700px) {

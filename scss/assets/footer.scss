@@ -29,31 +29,22 @@
     
 }
 
-// .footer__logo img {
-//     max-width: 170px;
-//     max-height: 64px;
-    
-// }
-
-.footer__navigation {
-    display: flex;
-    
-}
-@media (max-width: 390px) {
-    .footer__navigation {
-        flex-wrap: wrap;
-
-        // .navigation__list :not(:last-child) {
-        //     margin-bottom: 15px;
-        // }
-    }
-}
-// .footer__navigation > :not(:last-child) {
-//     margin-right: calc(30px + (140 - 30) * (100vw / 1262));
-//     margin-bottom: 15px;
-// }
-
 .navigation__list {}
+
+.navigation__item {
+
+    position: relative;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: hidden; /* Щоб приховати вміст при зміні висоти */  
+    // width: 100%;  
+    
+}
+
+
 
 .navigation__title {
     font-size: 18px;
@@ -63,7 +54,7 @@
 }
 
 .sub-navigation__list {
-    // display: none;
+    display: none;
 }
 
 .sub-nawigation__item {
@@ -77,49 +68,69 @@
     
 }
 
-.menu__navigation {
-    
-  
-}
-
 .navigation__list {
+    position: relative;
     display: flex;
+    gap:  calc(30px + (140 - 30) * (100vw / 1262));
+    // left: 33px;
+    
     
 }
 
 @media(max-width:500px) {
     .navigation__list {
-        // flex-direction: column;
+        flex-direction: column;
+        gap: 4px;
         
     }
     .navigation__list > li {
         margin-bottom: 20px;
     }
 
+    .sub-navigation__list {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        background-color: #444;
+    }
 }
 
-.navigation__item {
-    position: relative;
-}
 
-.navigation__item > :not(:last-child) {
-    margin-right: calc(30px + (140 - 30) * (100vw / 1262));
+
+.navigation__item>:not(:last-child) {
+    
+
+    // margin-right: calc(30px + (140 - 30) * (100vw / 1262));
     margin-bottom: 15px;
 }
+
 .navigation__item:hover .sub-navigation__list  {
     display: block;
-}
-.sub-navigation__list {
-    position: absolute;
-    display: none;
-}
-.sub-navigation__list {
+    max-height: 200px;
     
+}
+.sub-navigation__list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background-color: #444;
 }
 
 .sub-nawigation__item {
+    padding-bottom: 5px;
+    
+  
+
 }
+
 .sub-navigation__link {
+
 }
 
 @media(max-width: 700px) {

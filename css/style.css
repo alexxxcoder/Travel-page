@@ -566,12 +566,22 @@ h1, h2, h3, h4, h5, h6 {
 
 .navigation__item {
   position: relative;
-  background-color: #333;
   color: white;
   padding: 10px;
   cursor: pointer;
   transition: all 0.3s ease;
-  overflow: hidden; /* Щоб приховати вміст при зміні висоти */
+}
+
+.sub-navigation__list {
+  position: absolute;
+  top: 40px;
+  left: 5px;
+  display: none;
+}
+
+.sub-navigation__list_new {
+  display: none;
+  max-height: 200px;
 }
 
 .navigation__title {
@@ -579,10 +589,6 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   line-height: 133.3333333333%;
   padding-bottom: 4px;
-}
-
-.sub-navigation__list {
-  display: none;
 }
 
 .sub-nawigation__item {
@@ -602,6 +608,15 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: column;
     gap: 4px;
   }
+  .navigation__item {
+    position: relative;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: hidden; /* Щоб приховати вміст при зміні висоти */
+  }
   .navigation__list > li {
     margin-bottom: 20px;
   }
@@ -609,10 +624,13 @@ h1, h2, h3, h4, h5, h6 {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
     background-color: #444;
+  }
+  .navigation__item:hover .sub-navigation__list_new {
+    display: block;
+    max-height: 200px;
   }
 }
 .navigation__item > :not(:last-child) {
@@ -625,13 +643,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .sub-navigation__list {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
-  background-color: #444;
+  position: absolute;
+  top: 40px;
+  left: 5px;
 }
 
 .sub-nawigation__item {

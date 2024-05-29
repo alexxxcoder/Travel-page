@@ -36,7 +36,7 @@ gsap.to(".burger-icon", {
 ////////    animation header__logo ////////
 
 gsap.to(".header__logo", {
-    x: -1000, 
+    x: -1000,
     duration: 8,
     scrollTrigger: {
         trigger: ".header__logo",
@@ -49,4 +49,37 @@ gsap.to(".header__logo", {
 
 ////////////////////////////////
 
+// function updateCSSRules() {
+//     const width = window.innerWidth;
+//     const navItem = document.querySelector('.navigation__item');
 
+//     if (width < 500) {
+//         navItem.children[1].classList.remove('sub-navigation__list');
+//         navItem.children[1].classList.add('sub-navigation__list_new');
+//     } else {
+//         navItem.children[1].classList.add('sub-navigation__list');
+//     }
+// }
+// updateCSSRules();
+// window.addEventListener('resize', updateCSSRules);
+
+function updateCSSRules() {
+    const width = window.innerWidth;
+    const navLists = document.querySelectorAll('.navigation__list');
+
+    navLists.forEach(navList => {
+        const subNavList = navList.querySelector('.sub-navigation__list');
+        if (width < 500) {
+            subNavList.classList.remove('sub-navigation__list');
+            subNavList.classList.add('sub-navigation__list_new');
+        }else {
+            subNavList.classList.add('sub-navigation__list');
+            subNavList.classList.remove('sub-navigation__list_new');
+        }
+    });
+    console.log('e');
+    
+}
+
+updateCSSRules();
+window.addEventListener('resize', updateCSSRules);

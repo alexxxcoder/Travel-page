@@ -49,36 +49,47 @@ gsap.to(".header__logo", {
 
 ////////////////////////////////
 
-// function updateCSSRules() {
-//     const width = window.innerWidth;
-//     const navItem = document.querySelector('.navigation__item');
+let isMobile = {
+	Android: function() {return navigator.userAgent.match(/Android/i);},
+	BlackBerry: function() {return navigator.userAgent.match(/BlackBerry/i);},
+	iOS: function() {return navigator.userAgent.match(/iPhone|iPad|iPod/i);},
+	Opera: function() {return navigator.userAgent.match(/Opera Mini/i);},
+	Windows: function() {return navigator.userAgent.match(/IEMobile/i);},
+	any: function() {return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());}
+};
 
-//     if (width < 500) {
-//         navItem.children[1].classList.remove('sub-navigation__list');
-//         navItem.children[1].classList.add('sub-navigation__list_new');
-//     } else {
-//         navItem.children[1].classList.add('sub-navigation__list');
-//     }
-// }
-// updateCSSRules();
-// window.addEventListener('resize', updateCSSRules);
+    let navigationList = document.querySelector('.navigation__list');
+if(isMobile.any()) {
+    navigationList.classList.add('touch');
+    let arrows = document.querySelectorAll('.arrow');
+
+    arrows.forEach((el) => {
+        let subMenu = el.nextElementSibling;
+        el.addEventListener('click', function() {
+            subMenu.classList.toggle('active')
+            el.classList.toggle('open')
+        })
+    })
+
+} else {
+    navigationList.classList.add('mouse');
+}
+
 
 function updateCSSRules() {
     const width = window.innerWidth;
-    const navLists = document.querySelectorAll('.navigation__list');
+    const subNavLists = document.querySelectorAll('.sub-navigation__list, .sub-navigation__list_new');
 
-    navLists.forEach(navList => {
-        const subNavList = navList.querySelector('.sub-navigation__list');
+
+    subNavLists.forEach((item) => {
         if (width < 500) {
-            subNavList.classList.remove('sub-navigation__list');
-            subNavList.classList.add('sub-navigation__list_new');
-        }else {
-            subNavList.classList.add('sub-navigation__list');
-            subNavList.classList.remove('sub-navigation__list_new');
+            item.classList.remove('sub-navigation__list');
+            item.classList.add('sub-navigation__list_new');
+        } else {
+            item.classList.remove('sub-navigation__list_new');
+            item.classList.add('sub-navigation__list');
         }
-    });
-    console.log('e');
-    
+    })
 }
 
 updateCSSRules();

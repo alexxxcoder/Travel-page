@@ -6,28 +6,33 @@
 
 .footer__container {
     display: flex;
-    padding: calc(70px + (100 - 45) * (100vw / 1262)) 20px; 
+    padding: calc(70px + (100 - 45) * (100vw / 1262)) 20px;
     align-items: center;
     // margin: 0 auto;
 
     justify-content: space-between;
 }
+
 @media (max-width: 550px) {
     .footer__container {
         flex-direction: column;
     }
-}   
+}
 
 .footer__logo {
     padding: 20px 20px 20px 20px;
 }
 
 .footer__logo img {
-    max-width: 100%; /* Лого буде маштабуватися до 100% ширини батьківського контейнера */
-    min-height: 50px; /* Встановіть максимальну висоту, яка вам потрібна */
+    max-width: 100%;
+    /* Лого буде маштабуватися до 100% ширини батьківського контейнера */
+    min-height: 50px;
+    /* Встановіть максимальну висоту, яка вам потрібна */
     margin-right: 20px;
-    
+
 }
+
+///////////////////////////  NAVIGATION    ////////////////
 
 .navigation__list {}
 
@@ -37,9 +42,7 @@
     padding: 10px;
     cursor: pointer;
     transition: all 0.3s ease;
-    // overflow: hidden; /* Щоб приховати вміст при зміні висоти */  
-    // width: 100%;  
-    
+
 }
 
 .sub-navigation__list {
@@ -47,30 +50,38 @@
     top: 40px;
     left: 5px;
     display: none;
-    
-    // list-style-type: none;
-    // padding: 0;
-    // margin: 0;
-    // max-height: 0;
-    // overflow: hidden;
-    // transition: max-height 0.3s ease;
-    // background-color: #444;
 }
+
 .sub-navigation__list_new {
     display: none;
     max-height: 200px;
 }
 
+
+
 .navigation__title {
     font-size: 18px;
     font-weight: 700;
     line-height: calc(24 / 18 * 100%);
-    padding-bottom: 4px;
+    padding-bottom: 6px;
 }
 
-.sub-navigation__list {
-   
+ul.touch .arrow {
+    position: relative;
+    right: -8px;
+    top: 15px;
+    height: 0;
+    width: 0;
+    border-top: 10px solid #fff;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    transition: transform 0.3s ease;
 }
+
+
+.navigation__arrow {}
+
+.sub-navigation__list {}
 
 .sub-nawigation__item {
     font-size: 16px;
@@ -79,90 +90,50 @@
 
 }
 
-.navigation__link{
-    
-}
+.navigation__link {}
 
 .navigation__list {
     position: relative;
     display: flex;
-    gap:  calc(30px + (140 - 30) * (100vw / 1262));
-    // left: 33px;
-    
-    
+    gap: calc(30px + (140 - 30) * (100vw / 1262));
 }
 
 @media(max-width:500px) {
     .navigation__list {
         flex-direction: column;
         gap: 4px;
-        
     }
 
-    .navigation__item {
+    .navigation__item {}
 
-        position: relative;
-        background-color: #333;
-        color: white;
-        padding: 10px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        overflow: hidden; /* Щоб приховати вміст при зміні висоти */  
-        // width: 100%;  
-        
-    }
-
-    .navigation__list > li {
-        margin-bottom: 20px;
-    }
+    .navigation__list>li {}
 
     .sub-navigation__list {
+        display: none;
         list-style-type: none;
         padding: 0;
         margin: 0;
         overflow: hidden;
         transition: max-height 0.3s ease;
-        background-color: #444;
+
     }
-    .navigation__item:hover .sub-navigation__list_new{
-        display: block;
-        max-height: 200px;
-    }
+
 }
 
 
 
 .navigation__item>:not(:last-child) {
-    
-
-    // margin-right: calc(30px + (140 - 30) * (100vw / 1262));
     margin-bottom: 15px;
 }
 
-.navigation__item:hover .sub-navigation__list  {
-    display: block;
-    max-height: 200px;
-    
-}
 .sub-navigation__list {
     position: absolute;
     top: 40px;
     left: 5px;
-    
-    // list-style-type: none;
-    // padding: 0;
-    // margin: 0;
-    // max-height: 0;
-    // overflow: hidden;
-    // transition: max-height 0.3s ease;
-    // background-color: #444;
 }
 
 .sub-nawigation__item {
     padding-bottom: 5px;
-    
-  
-
 }
 
 @media(max-width: 700px) {
@@ -171,4 +142,18 @@
         justify-content: center;
         align-items: center;
     }
+}
+
+ul.mouse .navigation__item:hover .sub-navigation__list {
+    display: block;
+    max-height: 200px;
+
+}
+
+.arrow.open {
+    transform: rotate(-180deg);
+}
+
+.active {
+    display: block;
 }

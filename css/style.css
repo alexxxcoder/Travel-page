@@ -559,8 +559,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer__logo img {
-  max-width: 100%; /* Лого буде маштабуватися до 100% ширини батьківського контейнера */
-  min-height: 50px; /* Встановіть максимальну висоту, яка вам потрібна */
+  max-width: 100%;
+  /* Лого буде маштабуватися до 100% ширини батьківського контейнера */
+  min-height: 50px;
+  /* Встановіть максимальну висоту, яка вам потрібна */
   margin-right: 20px;
 }
 
@@ -588,7 +590,19 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 18px;
   font-weight: 700;
   line-height: 133.3333333333%;
-  padding-bottom: 4px;
+  padding-bottom: 6px;
+}
+
+ul.touch .arrow {
+  position: relative;
+  right: -8px;
+  top: 15px;
+  height: 0;
+  width: 0;
+  border-top: 10px solid #fff;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+  transition: transform 0.3s ease;
 }
 
 .sub-nawigation__item {
@@ -608,38 +622,17 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: column;
     gap: 4px;
   }
-  .navigation__item {
-    position: relative;
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    overflow: hidden; /* Щоб приховати вміст при зміні висоти */
-  }
-  .navigation__list > li {
-    margin-bottom: 20px;
-  }
   .sub-navigation__list {
+    display: none;
     list-style-type: none;
     padding: 0;
     margin: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
-    background-color: #444;
-  }
-  .navigation__item:hover .sub-navigation__list_new {
-    display: block;
-    max-height: 200px;
   }
 }
 .navigation__item > :not(:last-child) {
   margin-bottom: 15px;
-}
-
-.navigation__item:hover .sub-navigation__list {
-  display: block;
-  max-height: 200px;
 }
 
 .sub-navigation__list {
@@ -659,6 +652,19 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
   }
 }
+ul.mouse .navigation__item:hover .sub-navigation__list {
+  display: block;
+  max-height: 200px;
+}
+
+.arrow.open {
+  transform: rotate(-180deg);
+}
+
+.active {
+  display: block;
+}
+
 .wrapper {
   min-height: 100%;
   overflow: hidden;

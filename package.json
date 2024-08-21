@@ -1,7 +1,6 @@
 {
   "name": "beginner",
-  "version": "q",
-  "description": "",
+  "description": "Adaptive web page)",
   "main": "index.js",
   "scripts": {
     "serve": "npx live-server --port=777",
@@ -13,5 +12,14 @@
     "live-server": "^1.2.2",
     "sass": "^1.77.2"
   },
-  "repository": "https://github.com/alexxxcoder/Travel-page.git"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexxxcoder/Travel-page.git"
+  },
+  "version": "1.0.0",
+  "devDependencies": {},
+  "bugs": {
+    "url": "https://github.com/alexxxcoder/Travel-page/issues"
+  },
+  "homepage": "https://github.com/alexxxcoder/Travel-page#readme"
 }
